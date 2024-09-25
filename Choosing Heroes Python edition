@@ -1,0 +1,64 @@
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+#calell Park
+# Created in Python Using ChatGPT
+# Changes I made: Allowing the player to choose call the attribute by using a number or an attribute signal word
+# Heroes categorized by their attributes
+heroes_by_attribute = {
+    "Strength": ["Sven", "Tidehunter", "Tiny", "Axe", "Centaur Warrunner"],
+    "Agility": ["Juggernaut", "Phantom Assassin", "Riki", "Drow Ranger", "Anti-Mage"],
+    "Intelligence": ["Invoker", "Crystal Maiden", "Storm Spirit", "Pugna", "Lina"]
+}
+
+# Initialize player selections (can bundle 3 heroes)
+selected_heroes = []
+
+# Function to display available heroes by attribute
+def display_available_heroes(attribute):
+    print(f"\nAvailable {attribute} heroes: {', '.join(heroes_by_attribute[attribute])}")
+
+# Function to select heroes
+def select_heroes():
+    global selected_heroes
+    
+    # While the player has less than 3 heroes selected
+    while len(selected_heroes) < 3:
+        # Allow the player to switch between attributes
+        print("\nChoose an attribute to view available heroes:")
+        print("1. Strength\n2. Agility\n3. Intelligence")
+        attribute_choice = input("Enter the number of the attribute you want to view: ")
+
+        if attribute_choice == "1" or attribute_choice == "Strength" :
+            attribute = "Strength"
+        elif attribute_choice == "2" or attribute_choice == "Agility":
+            attribute = "Agility"
+        elif attribute_choice == "3" or attribute_choice == "Intelligence":
+            attribute = "Intelligence"
+        else:
+            print("Invalid choice. Please choose a valid attribute.")
+            continue
+
+        # Display heroes of the chosen attribute
+        display_available_heroes(attribute)
+
+        # Ask the player to select a hero from the chosen attribute
+        hero_choice = input(f"Please type the name of the {attribute} hero you want to select: ")
+
+        # Check if the hero is available and not already selected
+        if hero_choice in heroes_by_attribute[attribute] and hero_choice not in selected_heroes:
+            selected_heroes.append(hero_choice)
+            heroes_by_attribute[attribute].remove(hero_choice)  # Remove the hero from available pool
+            print(f"{hero_choice} added to your bundle.")
+        else:
+            print("Invalid choice or hero already selected. Please try again.")
+
+    # Once 3 heroes are selected, give the option to start the match
+    print("\nYour selected heroes are:", ", ".join(selected_heroes))
+    start_match = input("You have selected 3 heroes. Would you like to start the match? (yes/no): ").lower()
+    if start_match == 'yes':
+        print("Starting the match with your heroes:", ", ".join(selected_heroes))
+    else:
+        print("Match canceled.")
+
+# Run the function
+select_heroes()

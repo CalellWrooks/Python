@@ -1,0 +1,55 @@
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+# Online Python compiler (interpreter) to run Python online.
+# https://www.programiz.com/python-programming/online-compiler/
+# Write Python 3 code in this online editor and run it.
+print("Welcome to Calell's Story Game")
+t= 1
+while t==1:
+    n = input("Choose the 'left door' or the 'right door':")
+    if n=="right door" or n=="right" or n=="the right door" or n=="rd" or n=="Right Door" or n=="The Right Door" or n=="the right one" or n=="right one" or n=="r":
+        print("Entered the right door")
+        rec00 = "After entering the right door"
+        t = 2
+    elif n=="left door" or n=="left" or n=="the left door" or n=="ld" or n=="Left Door" or n=="The Left Door" or n=="the left one" or n=="left one" or n=="l":
+        print("Entered the left door")
+        rec00 = "After entering the left door"
+        t = 2
+    else:
+        print("Invalid choice retry")
+        rec00 = ""
+        t =1
+while t == 2:
+    n = input("Choose to pick up the 'hoe' or the 'sheep':")
+    if n=="hoe" or n=="pick up a hoe" or n=="pick a hoe" or n=="work the ground" or n=="pick hoe" or n=="Hoe" or n=="h":
+        print("you picked up a picked up a hoe")
+        rec01 = "you picked up a hoe to work the ground"
+        t=3
+    elif n=="sheep" or n=="select a sheep" or n=="pick a sheep" or n=="shear the sheep"or n=="Sheep" or n=="s":
+        print("You selected a sheep")
+        rec01 = "you picked up a sheep to shear its pelt"
+        t=3
+    else:
+        print("Invalid choice")
+        rec01 = ""
+        t=2
+while t == 3:
+    n = input("Sell your hardwork to a neighbor or to family:")
+    if n=="sell to neighbor" or n=="neighbor" or n=="Neighbor" or n=="sell hardwork to a neighbor" or n=="give to a neighbor" or n=="n":
+        print("you sold your hardwork to a neighbor")
+        rec02 = "after a days hardwork you sold your triumph to a neighbor and gained double your reward"
+        t= 4
+    elif n=="sell to family" or n=="family" or n=="Sell hardwork to a family" or n=="f" or n=="family member" or n=="fm":
+        print("you sold to family")
+        rec02 = "after a days hardwork you sold your triumph to a family member and gained double your reward"
+        t=4
+    else:
+        print("Invalid choice")
+        rec02 = ""
+        t =3
+while t == 4:
+        print("The Story goes")
+        print(rec00, rec01,rec02)
+        t=5
+while t==5:
+    print("")

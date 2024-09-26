@@ -2,6 +2,7 @@
 # Write Python 3 code in this online editor and run it.
 # Online Python compiler (interpreter) to run Python online.
 # https://www.programiz.com/python-programming/online-compiler/
+# made for my Gaming and Simulation Class
 # Write Python 3 code in this online editor and run it.
 print("Welcome to Calell's Story Game")
 t= 1

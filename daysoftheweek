@@ -1,0 +1,19 @@
+t = 1
+week = ["monday", "Monday", "Tuesday", "tuesday", "wednesday", "Wednesday", "Thursday", "thursday", "Friday", "friday", "Saturday", "saturday", "sunday", "Sunday"]
+
+while t == 1:
+
+    inp = str(input("What day of the week is it? Type next to move on..."))
+    if inp in week:
+        print(inp + " is the day of the week")
+
+    elif inp == "next" or inp == "Next":
+        print ("are you sure you want to move on?")
+        inp = str(input("type yes or y to move on to move on"))
+        if inp == "y" or inp == "yes":
+            print("you typed " + inp)
+            t = t + 1
+        else:
+            t = t + 0
+    else:
+        pass

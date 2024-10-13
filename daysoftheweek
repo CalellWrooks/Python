@@ -1,3 +1,6 @@
+#created 10/13/2024
+#code for tracking days of the week
+
 t = 1
 week = ["monday", "Monday", "Tuesday", "tuesday", "wednesday", "Wednesday", "Thursday", "thursday", "Friday", "friday", "Saturday", "saturday", "sunday", "Sunday"]
 

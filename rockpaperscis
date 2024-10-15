@@ -28,13 +28,13 @@ for i in range(t):
         print("Computer wins")
         compWins = compWins + 1
     elif gameAct == "Paper" and inp == "Rock":
-        print("User wins")
-        userWins = userWins + 1
-    elif gameAct == "Paper" and inp == "Scissors":
         print("Computer wins")
         compWins = compWins + 1
+    elif gameAct == "Paper" and inp == "Scissors":
+        print("User wins")
+        compWins = userWins + 1
     elif gameAct == "Scissors" and inp == "Rock":
-        print("Computer wins")
+        print("User wins")
         userWins = userWins + 1
     elif gameAct == "Scissors" and inp == "Paper":
         print("Computer wins")

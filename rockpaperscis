@@ -1,0 +1,34 @@
+# Date Started and Completed 10/15/2024
+
+t = int(input("How many rounds do you want???"))
+
+for i in range(t):
+    import random
+
+# List of strings
+    gameSetup = ["Rock", "Paper", "Scissors"]
+
+    inp = str(input("Write Rock Paper or Scissors."))
+
+    if inp in gameSetup:
+        print(inp)
+    gameAct = random.choice(gameSetup)
+# Print the shuffled list
+    print(gameAct)
+    if gameAct == inp:
+        print("Draw")
+    elif gameAct == "Rock" and inp == "Paper":
+        print("User wins")
+    elif gameAct == "Rock" and inp == "Scissors":
+        print("Computer wins")
+    elif gameAct == "Paper" and inp == "Rock":
+        print("User wins")
+    elif gameAct == "Paper" and inp == "Scissors":
+        print("Computer wins")
+    elif gameAct == "Scissors" and inp == "Rock":
+        print("User wins")
+    elif gameAct == "Scissors" and inp == "Paper":
+        print("Computer wins")
+    else:
+        pass
+    

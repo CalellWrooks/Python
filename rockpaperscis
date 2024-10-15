@@ -1,9 +1,13 @@
-# Date Started and Completed 10/15/2024
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
 
+# Date Started and Completed 10/15/2024
+import random
+compWins = 0
+userWins = 0
 t = int(input("How many rounds do you want???"))
 
 for i in range(t):
-    import random
 
 # List of strings
     gameSetup = ["Rock", "Paper", "Scissors"]
@@ -19,16 +23,29 @@ for i in range(t):
         print("Draw")
     elif gameAct == "Rock" and inp == "Paper":
         print("User wins")
+        userWins = userWins + 1
     elif gameAct == "Rock" and inp == "Scissors":
         print("Computer wins")
+        compWins = compWins + 1
     elif gameAct == "Paper" and inp == "Rock":
         print("User wins")
+        userWins = userWins + 1
     elif gameAct == "Paper" and inp == "Scissors":
         print("Computer wins")
+        compWins = compWins + 1
     elif gameAct == "Scissors" and inp == "Rock":
-        print("User wins")
+        print("Computer wins")
+        userWins = userWins + 1
     elif gameAct == "Scissors" and inp == "Paper":
         print("Computer wins")
+        compWins = compWins + 1
     else:
         pass
-    
+if compWins > userWins:
+    print("User loses " + str(compWins) + " out of " + str(t))
+elif compWins < userWins:
+    print("User Wins " + str(userWins) + " out of " + str(t))
+elif compWins == userWins:
+    print("User has a draw " + str(userWins) + " out of " + str(t))
+else:
+    pass

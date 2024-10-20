@@ -1,0 +1,41 @@
+n = int(input("How many rounds do you want???"))  # How long the program runs
+
+space = " "  # Declare a space so that the "0" can move around
+locR = 1  # To express movement, starting at position 1
+inp = " "
+
+def beginningCode():  # Beginning Code
+    global locR  # Allow modification of global variable locR
+    
+    for i in range(n):  # How long the program runs
+        inp = str(input("Left or Right: ")).lower()  # Normalize input to lowercase
+        
+        if inp == "right" or inp == "r":  # If the player chooses to move right
+            if locR < 3:  # Prevent going out of bounds
+                locR = locR + 1  # Update locR
+                boardUpdateR()  # Update the board
+            else:
+                print("Out of bounds! Can't move right.")
+        elif inp == "left" or inp == "l":  # If the player chooses to move left
+            if locR > 1:  # Prevent going out of bounds
+                locR = locR - 1  # Update locR
+                boardUpdateR()  # Update the board
+            else:
+                print("Out of bounds! Can't move left.")
+        else:
+            print("Invalid input. Please choose 'left' or 'right'.")
+
+def boardCreate():  # Create the basics of the board
+    print("-----")  # Top and bottom border of the board
+
+def boardUpdateR():  # Update board script
+    boardCreate()  # Draw top of the board
+    if locR == 1:  # Draw "0" in the first position
+        print("-0  -")
+    elif locR == 2:  # Draw "0" in the middle
+        print("- 0 -")
+    elif locR == 3:  # Draw "0" in the last position
+        print("-  0-")
+    boardCreate()  # Draw bottom of the board
+
+beginningCode()  # Start the program
